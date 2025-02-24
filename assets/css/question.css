@@ -5,6 +5,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* da revisionare grandezze font, i box delle answers */
 #logo {
   width: 100px;
 }
@@ -40,38 +41,20 @@ h2 {
   font-family: 'Playwrite VN', serif;
   margin-bottom: -1em;
 }
-#answerbox {
-  margin-top: 2em;
+.answerbox {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
 }
 .answer {
-  padding: 0.4em 2em 0.4em 2em;
+  padding: 0.4em 3em 0.4em 3em;
   background-color: #2b2a55;
   border: solid 2px #ffffff;
-  border-radius: 15%;
+  border-radius: 15px;
   margin: 2em;
   color: white;
   font-size: 14px;
 }
-/*
-#answersBox1 {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-}
-#answersBox2 {
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-left: auto;
-  margin-right: auto;
-  flex-wrap: wrap;
-}*/
-/* flex-flow: row nowrap*/
 #questionsBox {
   text-align: center;
   margin-bottom: 1em;
