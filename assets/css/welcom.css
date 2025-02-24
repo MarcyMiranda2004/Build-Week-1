@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  width: 100%;
+}
+
+header img {
+  width: 150px;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+h3 {
+  color: rgb(141, 42, 124);
+}
+
+button {
+  background: #00f154;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
