@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esito Esame</title>
+    <link rel="stylesheet" href="/assets/css/resultspage.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="brand">Epicode</h2>
+      <h1 class="title">Results</h1>
+      <p class="subtitle">The summary of your answers:</p>
+
+      <div class="results">
+        <div class="result-info">
+          <p>Correct</p>
+          <h3>66.7%</h3>
+          <p>4/6 questions</p>
+        </div>
+        <div class="chart-container">
+          <canvas id="resultChart"></canvas>
+          <div class="chart-text">
+            <p>Congratulations!</p>
+            <p class="highlight">You passed the exam.</p>
+            <p>
+              We'll send you the certificate in few minutes.<br />
+              Check your email (including promotions / spam folder)
+            </p>
+          </div>
+        </div>
+        <div class="result-info">
+          <p>Wrong</p>
+          <h3>33.3%</h3>
+          <p>2/6 questions</p>
+        </div>
+      </div>
+      <button class="rate-btn" RATE US></button>
+    </div>
+  </body>
+</html>

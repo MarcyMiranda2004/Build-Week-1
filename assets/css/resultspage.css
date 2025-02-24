@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #0c0c26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background: linear-gradient(135deg, #040021, #5b2c83);
+    padding: 50px;
+    border-radius: 20px;
+    width: 800px;
+    text-align: center;
+    color: white;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.result-info {
+    text-align: center;
+}
+
+.result-info p {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.result-info h3 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.chart-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.chart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px;
+    width: 150px;
+}
+
+.chart-text .highlight {
+    font-weight: bold;
+    color: cyan;
+}
+
+.rate-btn {
+    background: transparent;
+    border: 2px solid white;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.rate-btn:hover {
+    background: white;
+    color: black;
+    transition: 0.3s;
+}
