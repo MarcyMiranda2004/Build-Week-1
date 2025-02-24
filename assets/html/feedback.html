@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    />
+    <link rel="stylesheet" href="../css/feedback.css" />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="../img/epicode_logo.png" alt="" />
-        <h1>EPICODE</h1>
-      </div>
+      <img class="logo" src="../img/epicode_logo.png" alt="" />
     </header>
     <main>
       <h1>Tell us how it's going</h1>
       <p>
-        From 0 to 10, how likely are you to recommend EPICODE to a frienor a
+        From 0 to 10, how likely are you to recommend EPICODE to a friend or a
         colleague?
       </p>
       <form>
@@ -32,14 +36,15 @@
           <img src="../img/star.svg" alt="stella" class="star" />
           <img src="../img/star.svg" alt="stella" class="star" />
         </div>
-        <p>Leave us an open feedback about your experience so far</p>
+        <p id="leave">Leave us an open feedback about your experience so far</p>
         <input
           type="text"
           class="recensione"
           placeholder="Write your comment here"
-          size="50"
         />
-        <button class="tasto" type="button">MORE INFO</button>
+        <div>
+          <button class="tasto" type="button">MORE INFO</button>
+        </div>
       </form>
     </main>
   </body>
