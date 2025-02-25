@@ -24,7 +24,16 @@
         <div>
           <img src="../img/epicode_logo.png" alt="Logo di Epicode" id="logo" />
         </div>
-        <form id="timer">qui ci va il timer</form>
+        <form id="timer">
+          <div id="timerDiv">
+            <canvas id="donutTimer"></canvas>
+            <div id="timerString">
+              <div id="stringInSeconds">seconds</div>
+              <span id="timerText"></span>
+              <div id="remainingStrings">remaining</div>
+            </div>
+          </div>
+        </form>
       </div>
     </header>
     <main>
@@ -53,5 +62,8 @@
         </div>
       </form>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/question.js"></script>
   </body>
 </html>
