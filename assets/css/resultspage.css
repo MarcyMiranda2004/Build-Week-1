@@ -17,12 +17,23 @@ body {
 }
 
 .container {
-    background: linear-gradient(135deg, #040021, #5b2c83);
+    background-image:url(../img/bg.jpg);
     padding: 50px;
     border-radius: 20px;
     width: 800px;
     text-align: center;
     color: white;
+}
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
 }
 
 .brand {
