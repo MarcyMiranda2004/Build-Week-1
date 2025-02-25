@@ -37,18 +37,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BenchMark</title>
+    <link rel="stylesheet" href="./assets/css/welcom.css" />
     <link rel="stylesheet" href="#" />
     <link rel="stylesheet" href="#" />
     <link rel="stylesheet" href="#" />
-    <link rel="stylesheet" href="#" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <header></header>
-
-    <main></main>
-
-    <footer></footer>
+    <main>
+      <img src="./assets/img/epicode_logo.png" alt="logo" />
+      <h1>Welcome to <span>your exam</span></h1>
+      <div id="instructions">
+        <h3>Instructions</h3>
+        <p>
+          We don't expect most engineers to know the answers to all of these
+          question, so don't worry if you're unsure of a few of them
+        </p>
+      </div>
+      <ul>
+        <li>
+          Each question is <strong>timed</strong> and can only be
+          <strong>answered once</strong>
+        </li>
+        <li>
+          Changing browser tab or opening other windows will
+          <strong>invalidate the question</strong>
+        </li>
+        <li>This exam will take approx. <strong>0-5 min</strong></li>
+      </ul>
+      <div class="checkbox">
+        <input type="checkbox" class="custom-checkbox" />
+        I promise to answer myself without the help of anyone
+        <button>PROCEED</button>
+      </div>
+    </main>
 
     <script src="#"></script>
     <script src="#"></script>
@@ -154,7 +190,7 @@
           correct_answer: "Java",
           incorrect_answers: ["Python", "C", "Jakarta"],
         },
-      ];
+      ]
 
       window.onload = function () {
         // TIPS:
@@ -169,7 +205,7 @@
         // Mostra la prima domanda con il testo e i radio button.
         // Quando l'utente seleziona una risposta, passa alla domanda successiva dell'array e sostituisci quella precedentemente visualizzata con quella corrente,
         // salvando le risposte dell'utente in una variabile
-      };
+      }
 
       // Come calcolare il risultato? Hai due strade:
       // Se stai mostrando tutte le domande nello stesso momento, controlla semplicemente se i radio button selezionati sono === correct_answer
