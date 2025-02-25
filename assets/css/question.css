@@ -31,16 +31,18 @@ body {
 h1 {
   text-align: center;
   color: white;
-  font-size: 40px;
-  font-family: 'Playwrite VN', serif;
+  font-size: 30px;
+  font-family: 'Outfit', serif;
+  margin-bottom: 1.2em;
 }
 h2 {
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: normal;
-  font-family: 'Playwrite VN', serif;
-  margin-bottom: -2em;
+  font-family: 'Outfit', serif;
+  margin-bottom: -0.5em;
+  margin-top: 2em;
 }
 .answerbox {
   display: flex;
@@ -48,11 +50,12 @@ h2 {
   justify-content: center;
   margin-top: -2.5em;
 }
+
 .answer {
   padding: 0.6em 4.5em 0.6em 4.5em;
   background-color: #2b2a55;
   border: solid 2px #ffffff;
-  border-radius: 15px;
+  border-radius: 25px;
   margin: 2em;
   color: white;
   font-size: 14px;
