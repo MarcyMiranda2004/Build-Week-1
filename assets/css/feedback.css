@@ -8,8 +8,7 @@ html {
   margin-left: 5%;
 }
 main {
-  margin-top: -5%;
-  font-size: 60px;
+  font-size: 35px;
   font-family: outfit;
   color: white;
   display: flexbox;
@@ -31,7 +30,7 @@ footer {
   width: 1350px;
   border: none;
   border-bottom: 2px solid #ff00ff;
-  font-size: 60px;
+  font-size: 35px;
   color: white;
   outline: none;
   background-color: rgba(255, 255, 255, 0);
@@ -42,7 +41,7 @@ footer {
   border: 2px solid #00ffff;
   background: transparent;
   color: #000000;
-  font-size: 60px;
+  font-size: 35px;
   cursor: pointer;
   box-shadow: 0 0 10px #00ffff;
   background-color: #00ffff;
