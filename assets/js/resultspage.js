@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     options: {
       responsive: true,
-      cutout: "80%",
+      cutout: "70%",
       plugins: {
         legend: {
           display: false,
