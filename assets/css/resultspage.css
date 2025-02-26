@@ -37,7 +37,7 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 200px;
     height: auto;
 }
 
@@ -48,15 +48,15 @@ body {
 }
 
 .title {
-    font-size: 34px;
+    font-size: 50px;
     font-weight: 600;
     margin-top: 10px;
 }
 
 .subtitle {
-    font-size: 14px;
+    font-size: 25px;
     margin-bottom: 20px;
-    color: #b3b3b3;
+    color:white;
 }
 
 .results {
@@ -71,8 +71,8 @@ body {
 }
 
 .result-info p {
-    font-size: 14px;
-    color: #b3b3b3;
+    font-size: 40px;
+    color: white;
 }
 
 .result-info h3 {
@@ -82,127 +82,57 @@ body {
 
 .chart-container {
     position: relative;
-    width: 220px;
-    height: 220px;
-}
-.donut {
-    position: relative;
-    width: 200px;
-    height: 200px;
-}
-.donut-default {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
-  .donut-white {
-    width: 70%;
-    height: 70%;
-    border-radius: 50%;
-    background: #fff;
-    top: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-  .donut-line {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .donut-text {
-    top: 25px;
-    left: 25px;
-    width: 150px;
-    height: 150px;
-    background: #fff;
-    position: absolute;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    width: 400px;
+    height: 400px;
+    display:flex;
+    flex-direction: column;
     align-items: center;
-    z-index: 3;
-  }
-  .donut-epicode .donut-case {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #48b2c1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-clip: border-box;
-    overflow: hidden;
-  }
-  .donut-epicode .donut-case::before {
-    content: "";
-    clip: rect(0 200px 100px 0);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(180deg);
-    background: #cbcb41;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .donut-epicode .donut-case::after {
-    content: "";
-    clip: rect(0 100px 200px 0);
-    -webkit-transform: rotate(327.6deg);
-    transform: rotate(360deg);
-    background: #cbcb41;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .donut-epicode .donut-line::before {
-    content: "";
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    background: #fff;
-    z-index: 2;
-  }
-  .donut-epicode .donut-line::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    background: #fff;
-    border-bottom: 1px solid #fff;
-    z-index: 2;
-  }
+    justify-content: center;
+}
 
-.chart-text {
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.chart-text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 300px; 
+    height: 100px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 14px;
-    width: 150px;
+    color: white;
+    font-size: 16px;
 }
-
-.chart-text .highlight {
+.chart-text-box .main-text{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+   
+.chart-text-box .highlight {
+    font-size: 20px;
     font-weight: bold;
     color: cyan;
+    margin-bottom: 8px;
+}
+.chart-text-box .small-text{
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 .rate-btn {
+    margin-top: 15px;
     background: transparent;
     border: 2px solid white;
-    padding: 14px 28px;
-    font-size: 18px;
+    padding: 12px 24px;
+    font-size: 25px;
     color: white;
     border-radius: 8px;
     cursor: pointer;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esito Esame</title>
     <link rel="stylesheet" href="/assets/css/resultspage.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="container">
@@ -23,12 +24,16 @@
         </div>
         <div class="chart-container">
           <canvas id="resultChart"></canvas>
-          <div class="chart-text">
-            <p>Congratulations!</p>
+          <div class="chart-text-box">
+            <p class="main-text">Congratulations!</p>
             <p class="highlight">You passed the exam.</p>
-            <p>
+            <p class="small-text">
               We'll send you the certificate <br />
-              in few minutes. Check your email (including <br />
+              in few minutes.
+            </p>
+
+            <p class="small-text">
+              Check your email (including <br />
               promotions / spam folder)
             </p>
           </div>
@@ -41,6 +46,7 @@
       </div>
       <button class="rate-btn"><p>RATE US</p></button>
     </div>
+
     <script src="/assets/js/resultspage.js"></script>
   </body>
 </html>
