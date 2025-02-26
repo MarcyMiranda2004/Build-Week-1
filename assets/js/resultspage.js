@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   new Chart(ctx, {
     type: "doughnut",
     data: {
-      labels: ["Corrette", "Errate"],
+      labels: ["Errate", "Corrette"],
       datasets: [
         {
-          data: [66.7, 33.3],
-          backgroundColor: ["#00eaff", "#b033a3"],
+          data: [33.3, 66.7],
+          backgroundColor: ["#b033a3", "#00eaff"],
           borderWidth: 0,
         },
       ],
