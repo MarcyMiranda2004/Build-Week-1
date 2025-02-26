@@ -12,15 +12,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image:url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
+    
 }
 
 .container {
-    background-image:url(../img/bg.jpg);
+    
     padding: 50px;
     border-radius: 20px;
-    width: 800px;
+    width: 100%;
     text-align: center;
     color: white;
 }
@@ -32,7 +37,7 @@ body {
 }
 
 .logo {
-    width: 120px;
+    width: 150px;
     height: auto;
 }
 
@@ -80,6 +85,103 @@ body {
     width: 220px;
     height: 220px;
 }
+.donut {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.donut-default {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .donut-white {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background: #fff;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  .donut-line {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .donut-text {
+    top: 25px;
+    left: 25px;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+  .donut-epicode .donut-case {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #48b2c1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-clip: border-box;
+    overflow: hidden;
+  }
+  .donut-epicode .donut-case::before {
+    content: "";
+    clip: rect(0 200px 100px 0);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(180deg);
+    background: #cbcb41;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .donut-epicode .donut-case::after {
+    content: "";
+    clip: rect(0 100px 200px 0);
+    -webkit-transform: rotate(327.6deg);
+    transform: rotate(360deg);
+    background: #cbcb41;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .donut-epicode .donut-line::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    background: #fff;
+    z-index: 2;
+  }
+  .donut-epicode .donut-line::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 2;
+  }
 
 .chart-text {
     position: absolute;
