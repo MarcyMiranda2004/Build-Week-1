@@ -2,23 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const ctx = document.getElementById("resultChart").getContext("2d");
 
   new Chart(ctx, {
-    type: "doughnut", // Tipo di grafico
+    type: "doughnut",
     data: {
-      labels: ["Corrette", "Errate"], // Testo nella legenda
+      labels: ["Corrette", "Errate"],
       datasets: [
         {
-          data: [66.7, 33.3], // Percentuali di risposte corrette/sbagliate
-          backgroundColor: ["#00eaff", "#b033a3"], // Colori
-          borderWidth: 0, // Rimuove i bordi tra le sezioni
+          data: [66.7, 33.3],
+          backgroundColor: ["#00eaff", "#b033a3"],
+          borderWidth: 0,
         },
       ],
     },
     options: {
-      responsive: true, // Adatta il grafico allo schermo
-      cutout: "80%", // Grandezza del buco centrale (più grande per un buon effetto)
+      responsive: true,
+      cutout: "80%",
       plugins: {
         legend: {
-          display: false, // Nasconde la legenda
+          display: false,
         },
       },
     },
