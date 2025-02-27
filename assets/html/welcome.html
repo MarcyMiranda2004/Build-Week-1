@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <!--
+        QUIZ GAME!
+
+        REGOLE:
+        / L'utente dovrà indovinare un certo numero di domandeThe player must guess correctly a certain amount of questions
+        / Ogni risposta corretta gli darà 1 punto
+        / Le domande possono avere risposte multiple o singole (true/false)
+        / Al termine del quiz l'utente dovrà poter vedere il suo punteggio
+
+        DOMANDE:
+        / Le domande possono essere ottenute da questo URL ( http://bit.ly/strive_QUIZZ ) o puoi scriverne di tue
+        / Possono essere composte di boolean multipli (true / false)
+
+        TIPS:
+        / Usa una variabile globale per registrare il punteggio dell'utente
+        / Crea una variabile "questionNumber" per tenere traccia del numero (o posizione) della domanda presentata all'utente
+        / Quando "questionNumber" è maggiore delle domande disponibili, a quel punto l'applicazione dovrà mostrare il punteggio
+        / Comincia salvando le domande in una variabile (o reperiscile dall'URL fornito usando AJAX e fetch)
+        / Parti con l'implementazione semplice, poi passa agli extra e ad abbellire l'interfaccia 
+        / Fai test completi: controlla la console periodicamente per verificare che non ci siano errori e che il flusso di dati sia quello che ti aspetti
+
+        EXTRA:
+        / Dai un feedback sulla risposta al momento del click (corretta o sbagliata)
+        / Visualizza una domanda alla volta in sequenza piuttosto che tutte assieme in forma di lista
+        / Permetti all'utente di selezionare la difficoltà del quiz prima di iniziare e il numero di domande che desidera ricevere.
+        ( Se hai implementato l'applicazione usando l'URL fornito, puoi ottenere i dati che ti servono in modo semplice, 
+        usando query parameters in questo modo: https://opentdb.com/api.php?amount=10&category=18&difficulty=easy e modificarne il numero di domande e difficoltà )
+    
+        /* NON DIMENTICARE...
+          di fare commit & push del codice regolarmente sulla tua repository GitHub e di condividerla con i tuoi colleghi
+        */
+    -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BenchMark</title>
+    <link rel="stylesheet" href="../css/welcom.css" />
+
+    <!-- Outfit Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <img src="../img/epicode_logo.png" alt="Epicode - logo" />
+    </header>
+
+    <main>
+      <div id="container">
+        <h1>Welcome to <b>your exam</b></span></h1>
+        <h2>Instructions</h2>
+        <p>
+          We don’t expect most engineers to know the answers to all of these
+          questions, so don’t worry if you’re unsure of a few of them.
+        </p>
+        <ul>
+          <li>
+            Each question is <b>timed</b> and can only be <b>answered once.</b>
+          </li>
+          <li>
+            Changing browser tab or opening other windows will
+            <b>invalidate the question.</b>
+          </li>
+          <li>This exam will take approx. <b>0-5 minutes</b>.</li>
+        </ul>
+      </div>
+      <form class="form-container">
+        <div class="check-container">
+          <input type="checkbox" id="checkbox" />
+          <p>I promise to answer myself without help from anyone</p>
+          <!-- Questo div sarà nascosto inizialmente -->
+        </div>
+        <button id="startButton" type="button">PROCEED</button>
+      </form>
+      <p id="alertMessage">Accept the conditions before continuing.</p>
+    </main>
+
+    <script src="../js/welcome.js"></script>
+  </body>
+</html>

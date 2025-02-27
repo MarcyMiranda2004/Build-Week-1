@@ -1,0 +1,85 @@
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header img {
+  width: 20%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+/* Main */
+main {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+main h1 {
+  margin-bottom: 5px;
+  font-size: 2em;
+}
+
+main p {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+/* Contenitore principale */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+/* Contenitore del grafico */
+.chart-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+/* Contenitore delle percentuali */
+.percentage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px; /* Raddoppia la grandezza */
+  font-weight: bold;
+}
+
+/* Etichette per "Correct" e "Wrong" */
+.percentage-label {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+/* Stile del button */
+#buttonFeedback :hover {
+  background-color: white;
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2em;
+  padding: 0.5em 2.2em;
+  margin-top: 3em;
+  margin-left: 1em;
+  cursor: pointer;
+  border-radius: 0.5em;
+}

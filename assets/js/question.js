@@ -1,49 +1,160 @@
-const ctx = document.getElementById('donutTimer').getContext('2d');
-let timer = 60; // Imposta il tempo iniziale del timer in secondi
-
-const chart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    datasets: [
-      {
-        data: [timer, 100 - timer], // I dati per il grafico a ciambella
-        backgroundColor: [
-          // I colori per le due parti del grafico
-          '#00ffff', // Parte colorata (timer)
-          '#98699c', // Parte rimanente
-        ],
-        borderWidth: 0, // Spessore dei bordi
-        circumference: 360, // Imposta la circonferenza a 360 per un cerchio completo
-        rotation: 270, // Ruota il grafico di 270 gradi per iniziare dall'alto
-      },
+const questions = [
+  {
+    question:
+      "Qual è il tag principale che racchiude tutto il contenuto di una pagina HTML?",
+    answers: ["&lt;head&gt;", "&lt;body&gt;", "&lt;html&gt;", "&lt;title&gt;"],
+    correctAnswer: "&lt;html&gt;",
+    type: "multiple",
+  },
+  {
+    question: "Quale proprietà CSS si usa per cambiare il colore del testo?",
+    answers: ["font-color", "text-style", "color", "background-color"],
+    correctAnswer: "color",
+    type: "multiple",
+  },
+  {
+    question:
+      "Quale tag HTML viene usato per creare un collegamento ipertestuale?",
+    answers: ["&lt;a&gt;", "&lt;link&gt;", "&lt;href&gt;", "&lt;url&gt;"],
+    correctAnswer: "&lt;a&gt;",
+    type: "multiple",
+  },
+  {
+    question: "Quale proprietà CSS rende il testo più spesso (grassetto)?",
+    answers: ["font-weight", "bold", "text-style", "font-bold"],
+    correctAnswer: "font-weight",
+    type: "multiple",
+  },
+  {
+    question:
+      "Con quale tag si collega un file CSS esterno a un documento HTML?",
+    answers: ["&lt;script&gt;", "&lt;css&gt;", "&lt;link&gt;", "&lt;style&gt;"],
+    correctAnswer: "&lt;link&gt;",
+    type: "multiple",
+  },
+  {
+    question:
+      "Qual è la sintassi corretta per dichiarare una funzione in JavaScript?",
+    answers: [
+      "function myFunction()",
+      "def myFunction()",
+      "fun myFunction()",
+      "create function myFunction()",
     ],
+    correctAnswer: "function myFunction()",
+    type: "multiple",
   },
-  options: {
-    cutout: '80%', // Imposta la dimensione del "buco" al centro del grafico
-    plugins: {
-      legend: {
-        display: false, // Nascondi la legenda
-      },
-      tooltip: {
-        enabled: false, // Disabilita i tooltip
-      },
-    },
+  {
+    question: "Quale metodo JavaScript seleziona un elemento HTML tramite ID?",
+    answers: [
+      "getElementById()",
+      "querySelector()",
+      "getElementByClass()",
+      "selectById()",
+    ],
+    correctAnswer: "getElementById()",
+    type: "multiple",
   },
-});
-const intervalId = setInterval(updateTimer, 1000); // Aggiorna il timer ogni secondo
-const timerText = document.getElementById('timerText'); // Ottieni riferimento all'elemento per il testo
+  {
+    question: "Quale sintassi è corretta per scrivere un commento in CSS?",
+    answers: [
+      "// Questo è un commento",
+      "&lt;!-- Questo è un commento --&gt;",
+      "/* Questo è un commento */",
+      "' Questo è un commento",
+    ],
+    correctAnswer: "/* Questo è un commento */",
+    type: "multiple",
+  },
+  {
+    question:
+      "Il CSS viene utilizzato per definire lo stile di una pagina web.",
+    answers: ["Vero", "Falso"],
+    correctAnswer: "Vero",
+    type: "truefalse",
+  },
+  {
+    question:
+      "In JavaScript, 'let' e 'var' hanno lo stesso comportamento senza differenze.",
+    answers: ["Vero", "Falso"],
+    correctAnswer: "Falso",
+    type: "truefalse",
+  },
+];
 
-function updateTimer() {
-  timer--; // Decrementa il timer di 1 secondo
-  chart.data.datasets[0].data = [timer, 100 - timer]; // Aggiorna i dati del grafico
-  chart.update(); // Aggiorna il grafico
+let currentQuestionIndex = 0;
+let score = 0;
+let wrongAnswers = 0;
+const totalTime = 30;
+const totalCircleLength = 455;
+let timer;
 
-  // Aggiorna il testo del timer
-  timerText.textContent = timer;
+function loadQuestion() {
+  clearInterval(timer);
+  let timeLeft = totalTime;
+  const question = questions[currentQuestionIndex];
+  document.getElementById("question").textContent = question.question;
+  document.getElementById("answers").innerHTML = question.answers
+    .map(
+      (answer) =>
+        `<button class="answer-button" onclick="selectAnswer('${answer.replace(
+          /'/g,
+          "&#39;"
+        )}')">${answer}</button>`
+    )
+    .join("<br>");
+  document.getElementById("timerText").textContent = timeLeft;
+  document.getElementById("questionsCounter").innerHTML = `Domanda ${
+    currentQuestionIndex + 1
+  } / ${questions.length}`;
 
-  if (timer < 0) {
-    clearInterval(intervalId); // Ferma l'intervallo quando il timer arriva a zero
-    // Reindirizza a un'altra pagina
-    window.location.href = 'assets/html/resultspage.html'; // Sostituisci con l'URL desiderato
+  timer = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timerText").textContent = timeLeft;
+    document.getElementById("progressCircle").style.strokeDashoffset =
+      totalCircleLength - (timeLeft / totalTime) * totalCircleLength;
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      wrongAnswers++;
+      nextQuestion();
+    }
+  }, 1000);
+}
+
+function selectAnswer(answer) {
+  const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+  document.querySelectorAll(".answer-button").forEach((button) => {
+    button.disabled = true;
+    button.style.backgroundColor =
+      button.textContent === correctAnswer
+        ? "#4CAF50"
+        : button.textContent === answer
+        ? "#f44336"
+        : "#9E9E9E";
+  });
+  if (answer === correctAnswer) {
+    score++;
+  } else {
+    wrongAnswers++;
+  }
+  setTimeout(nextQuestion, 1000);
+}
+
+function nextQuestion() {
+  if (++currentQuestionIndex < questions.length) {
+    loadQuestion();
+  } else {
+    let totalQuestions = score + wrongAnswers;
+    localStorage.setItem("score", score);
+    localStorage.setItem("wrongAnswers", wrongAnswers);
+    localStorage.setItem("totalQuestions", totalQuestions);
+    window.location.href = "result.html";
   }
 }
+
+function shuffleQuestions() {
+  questions.sort(() => Math.random() - 0.5);
+  loadQuestion();
+}
+
+shuffleQuestions();

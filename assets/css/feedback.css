@@ -1,12 +1,25 @@
-html {
-  background-color: black;
+body {
   background-image: url(../img/bg.jpg);
   background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
 }
-.logo {
-  width: 200px;
-  margin-left: 5%;
+
+/* Header */
+header {
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+header img {
+  width: 20%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+/* Main */
 main {
   font-size: 30px;
   font-family: outfit;
@@ -15,6 +28,12 @@ main {
   align-items: center;
   text-align: center;
 }
+
+main h1 {
+  margin-top: 2em;
+}
+
+/* Footer */
 footer {
   font-family: outfit;
   color: white;
@@ -23,38 +42,8 @@ footer {
   text-align: center;
   margin-top: 10%;
 }
-.recensione {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 10px;
-  width: 1000px;
-  border: none;
-  border-bottom: 2px solid #ff00ff;
-  font-size: 35px;
-  color: white;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0);
-  margin-bottom: 30px;
-}
-.tasto {
-  padding: 10px 5px;
-  font-size: 20px;
-  cursor: pointer;
-  margin-top: 50px;
-  filter: grayscale(100%) brightness(0.7);
-  border: 2px solid #00ffff;
-  box-shadow: 0 0 10px #00ffff;
-  background-color: #00ffff;
-  color: #000000;
-}
-.tasto:hover {
-  filter: none;
-  border: 2px solid #00ffff;
-  box-shadow: 0 0 10px #00ffff;
-  background-color: #00ffff;
-  color: #000000;
-}
 
+/* Stile stelle */
 .voto {
   display: inline-flex;
   gap: 5px;
@@ -69,4 +58,44 @@ footer {
 
 .star.active {
   filter: grayscale(0%);
+}
+
+#feedbackZone {
+  margin-top: 4%;
+}
+
+/* Stile input feedback */
+.feedback {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+  width: 1000px;
+  border: none;
+  border-bottom: 2px solid #ff00ff;
+  font-size: 35px;
+  color: white;
+  outline: none;
+  background-color: transparent;
+  margin-bottom: 1%;
+}
+
+/* Stile Button more info */
+.moreInfo {
+  padding: 10px 5px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 50px;
+  background-color: #00ffff;
+  border: none;
+  box-shadow: 0px 0px 25px 3px #00ffff;
+  padding: 1em 3em;
+  font-weight: bold;
+}
+
+.moreInfo:hover {
+  filter: none;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+  background-color: #00ffff;
+  color: #000000;
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" href="../css/result.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../img/epicode_logo.png" alt="epicode_logo" />
+    </header>
+    <main>
+      <h1>Results</h1>
+      <p>The summary of your answers:</p>
+      <div class="main-container">
+        <!-- Percentuale risposte corrette -->
+        <div class="percentage-container">
+          <span id="correctLabel" class="percentage-label correct"></span>
+          <span id="correctPercentage" class="correct"></span>
+        </div>
+
+        <!-- Grafico -->
+        <div class="chart-container">
+          <canvas id="resultChart" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Percentuale risposte errate -->
+        <div class="percentage-container">
+          <span id="wrongLabel" class="percentage-label wrong"></span>
+          <span id="wrongPercentage" class="wrong"></span>
+        </div>
+      </div>
+
+      <div id="buttonFeedback">
+        <button onclick="location.href='feedback.html'">Rate Us</button>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/result.js"></script>
+  </body>
+</html>
