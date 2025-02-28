@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let totalQuestions = parseInt(localStorage.getItem("totalQuestions")) || 10;
   let correctAnswers = parseInt(localStorage.getItem("score")) || 0;
 
-  // Se il totale delle domande è inferiore alle risposte corrette, correggilo
   if (totalQuestions < correctAnswers || totalQuestions === 0) {
     let wrongAnswers = parseInt(localStorage.getItem("wrongAnswers")) || 0;
     totalQuestions = correctAnswers + wrongAnswers;
